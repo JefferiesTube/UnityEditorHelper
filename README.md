@@ -3,21 +3,22 @@ An organized bunch of scripts to make editor scripting in Unity easier - gathere
 
 # Samples
 
-** HighlightBox **
+## HighlightBox
 A box with round edges that can be colored and used to highlight some components
 
-            using (new HighlightBox())
-            {
-                EditorGUILayout.Slider("Range property", 5, 0, 10);
-                EditorGUILayout.TextField("Sample Field",  GUILayout.Height(150));
-                EditorGUILayout.ObjectField("Object Field", null, typeof (Transform), true);
-            }
+![Alt Text](https://imgur.com/41b7dYL)
+            
+	using (new HighlightBox())
+	{
+		EditorGUILayout.Slider("Range property", 5, 0, 10);
+		EditorGUILayout.TextField("Sample Field",  GUILayout.Height(150));
+		EditorGUILayout.ObjectField("Object Field", null, typeof (Transform), true);
+	}
 
-            using (new HighlightBox(Color.red))
-            {
-                EditorGUILayout.Slider("Range property", 5, 0, 10);
-                EditorGUILayout.TextField("Sample Field", GUILayout.Height(150));
-                EditorGUILayout.ObjectField("Object Field", null, typeof(Transform), true);
-            }
+	using (new HighlightBox(Color.red))
+	{
+		EditorGUILayout.Slider("Range property", 5, 0, 10);
+		EditorGUILayout.TextField("Sample Field", GUILayout.Height(150));
+		EditorGUILayout.ObjectField("Object Field", null, typeof(Transform), true);
+	}
 			
-			![Alt Text] https://imgur.com/41b7dYL
