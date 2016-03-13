@@ -1,11 +1,13 @@
-# UnityEditorHelper
-An organized bunch of scripts to make editor scripting in Unity easier - gathered from some of my projects and other free sources 
+﻿using UnityEditor;
+using UnityEngine;
 
-# Samples
-
-** HighlightBox **
-A box with round edges that can be colored and used to highlight some components
-
+namespace UnityEditorHelper
+{
+    [CustomEditor(typeof (SampleScript))]
+    public class ScreenshotTest : Editor
+    {
+        public override void OnInspectorGUI()
+        {
             using (new HighlightBox())
             {
                 EditorGUILayout.Slider("Range property", 5, 0, 10);
@@ -19,5 +21,6 @@ A box with round edges that can be colored and used to highlight some components
                 EditorGUILayout.TextField("Sample Field", GUILayout.Height(150));
                 EditorGUILayout.ObjectField("Object Field", null, typeof(Transform), true);
             }
-			
-			![Alt Text] https://imgur.com/41b7dYL
+        }
+    }
+}
