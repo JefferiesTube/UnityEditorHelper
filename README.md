@@ -57,7 +57,7 @@ A wrapper to change the GUIColor automatically without manually caching it and s
   EditorGUILayout.ObjectField("Object Field", null, typeof(Transform), true);
 ```
 
-### IdentBlock
+### IndentBlock
 A wrapper to indent controls
 
 ![Imgur](http://i.imgur.com/Zf17FFg.png)
