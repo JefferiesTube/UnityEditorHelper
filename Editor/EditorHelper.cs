@@ -188,6 +188,8 @@ namespace UnityEditorHelper
     {
         private readonly Color _defaultBackgroundColor;
 
+        private bool _expanded;
+
         public FoldableBlock(ref bool expanded, string header) : this(ref expanded, header, null)
         {
         }
@@ -211,6 +213,7 @@ namespace UnityEditorHelper
             {
                 GroupStart();
             }
+            _expanded = expanded;
         }
 
         private void GroupStart()
@@ -235,7 +238,8 @@ namespace UnityEditorHelper
 
         public void Dispose()
         {
-            GroupEnd();
+            if(_expanded)
+                GroupEnd();
         }
     }
 }
