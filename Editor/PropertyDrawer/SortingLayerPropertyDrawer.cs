@@ -12,7 +12,7 @@ namespace UnityEditorHelper
         {
             if (property.propertyType != SerializedPropertyType.Integer)
             {
-                // Integer is expected. Everything else is ignored.
+                Debug.LogWarning("SortingLayerAttributes can only be applied on integer properties/fields");
                 return;
             }
             EditorGUI.LabelField(position, label);

@@ -7,32 +7,32 @@ namespace UnityEditorHelper
     {
         public enum Mode { LimitLower, LimitUpper, LimitBoth }
 
-        public Mode LimitMode;
+        private readonly Mode _limitMode;
 
-        public int LowerLimit;
-        public int UpperLimit;
+        private readonly int _lowerLimit;
+        private readonly int _upperLimit;
 
         public LimitAttribute(int lowerLimit) : this(Mode.LimitLower, lowerLimit, int.MaxValue) { }
 
         public LimitAttribute(int lowerLimit, int upperLimit) : this(Mode.LimitLower, lowerLimit, upperLimit) { }
 
-        public LimitAttribute(Mode mode, int lowerLimit, int upperLimit)
+        private LimitAttribute(Mode mode, int lowerLimit, int upperLimit)
         {
-            LimitMode = mode;
-            LowerLimit = lowerLimit;
-            UpperLimit = upperLimit;
+            _limitMode = mode;
+            _lowerLimit = lowerLimit;
+            _upperLimit = upperLimit;
         }
 
         public int Limit(int value)
         {
-            switch (LimitMode)
+            switch (_limitMode)
             {
                 case Mode.LimitLower:
-                    return Mathf.Clamp(value, LowerLimit, int.MaxValue);
+                    return Mathf.Clamp(value, _lowerLimit, int.MaxValue);
                 case Mode.LimitUpper:
-                    return Mathf.Clamp(value, int.MinValue, UpperLimit);
+                    return Mathf.Clamp(value, int.MinValue, _upperLimit);
                 case Mode.LimitBoth:
-                    return Mathf.Clamp(value, LowerLimit, UpperLimit);
+                    return Mathf.Clamp(value, _lowerLimit, _upperLimit);
                 default:
                     throw new ArgumentOutOfRangeException();
             }
