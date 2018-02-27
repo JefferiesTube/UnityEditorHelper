@@ -75,6 +75,27 @@ namespace UnityEditorHelper
             return -1;
         }
 
+        public static Vector3 ScrollableSelectableLabel(Vector3 position, string text, GUIStyle style)
+        {
+            // Source: yoyo @ https://answers.unity.com/questions/255119/selectablelabel-or-textarea-in-scrollview.html
+            // Extract scroll position and width from position vector.
+            Vector2 scrollPos = new Vector2(position.x, position.y);
+            float width = position.z;
+            float pixelHeight = style.CalcHeight(new GUIContent(text), width);
+
+            scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Height(pixelHeight + 10));
+            // Calculate height of text.
+            EditorGUILayout.SelectableLabel(text, style, GUILayout.Height(pixelHeight));
+            // Update the width on repaint, based on width of the SelectableLabel's rectangle.
+            if (Event.current.type == EventType.Repaint)
+            {
+                width = GUILayoutUtility.GetLastRect().width;
+            }
+            EditorGUILayout.EndScrollView();
+            // Put scroll position and width back into the Vector3 used to track position.
+            return new Vector3(scrollPos.x, scrollPos.y, width);
+        }
+
         #endregion Utility Functions
 
         #region GUI Utilities
