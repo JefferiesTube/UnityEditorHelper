@@ -19,7 +19,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEE3DPMNVSQRLENF2G64SCNRXWG2ZOJ5ZGSZLOORQXI2LPNYXEQ33SNF5G63TUMFWCSKIKPMFCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXFIZLYORDGSZLMMQUCEVDFPB2CELBAEIRCSOYKEAQCAICFMRUXI33SI5KUSTDBPFXXK5BOINXWY33SIZUWK3DEFAREG33MN5ZCELBAINXWY33SFZTXEZLZFE5QU7I=".FromBase32()),
             new DemoScenarioContent("Horizontal block with named style 'Box'",
                 "Same as above but uses a style of a given name",
                 delegate
@@ -29,7 +29,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb2"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEE3DPMNVSQRLENF2G64SCNRXWG2ZOJ5ZGSZLOORQXI2LPNYXEQ33SNF5G63TUMFWCYIBCIJXXQIRJFEFHWCRAEAQCARLENF2G64SHKVEUYYLZN52XILSUMV4HIRTJMVWGIKBCKRSXQ5BCFQQCEIRJHMFCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXEG33MN5ZEM2LFNRSCQISDN5WG64RCFQQEG33MN5ZC4Z3SMV4SSOYKPU======".FromBase32()),
             new DemoScenarioContent("Horizontal block with named style 'GroupBox'",
                 "Same as above but uses a style of a given name",
                 delegate
@@ -39,7 +39,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb2"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEE3DPMNVSQRLENF2G64SCNRXWG2ZOJ5ZGSZLOORQXI2LPNYXEQ33SNF5G63TUMFWCYIBCI5ZG65LQIJXXQIRJFEFHWCRAEAQCARLENF2G64SHKVEUYYLZN52XILSUMV4HIRTJMVWGIKBCKRSXQ5BCFQQCEIRJHMFCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXEG33MN5ZEM2LFNRSCQISDN5WG64RCFQQEG33MN5ZC4Z3SMV4SSOYKPU======".FromBase32()),
         }
     };
 
@@ -56,7 +56,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEE3DPMNVSQRLENF2G64SCNRXWG2ZOJ5ZGSZLOORQXI2LPNYXFMZLSORUWGYLMFEUQU6YKEAQCAICFMRUXI33SI5KUSTDBPFXXK5BOKRSXQ5CGNFSWYZBIEJKGK6DUEIWCAIRCFE5QUIBAEAQEKZDJORXXER2VJFGGC6LPOV2C4Q3PNRXXERTJMVWGIKBCINXWY33SEIWCAQ3PNRXXELTHOJSXSKJ3BJ6QU===".FromBase32()),
             new DemoScenarioContent("Vertical block with named style 'Box'",
                 "Same as above but uses a style of a given name",
                 delegate
@@ -66,7 +66,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb2"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEE3DPMNVSQRLENF2G64SCNRXWG2ZOJ5ZGSZLOORQXI2LPNYXFMZLSORUWGYLMFQQCEQTPPARCSKIKPMFCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXFIZLYORDGSZLMMQUCEVDFPB2CELBAEIRCSOYKEAQCAICFMRUXI33SI5KUSTDBPFXXK5BOINXWY33SIZUWK3DEFAREG33MN5ZCELBAINXWY33SFZTXEZLZFE5QU7I=".FromBase32()),
             new DemoScenarioContent("Horizontal block with named style 'GroupBox'",
                 "Same as above but uses a style of a given name",
                 delegate
@@ -76,7 +76,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb2"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEE3DPMNVSQRLENF2G64SCNRXWG2ZOJ5ZGSZLOORQXI2LPNYXFMZLSORUWGYLMFQQCER3SN52XAQTPPARCSKIKPMFCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXFIZLYORDGSZLMMQUCEVDFPB2CELBAEIRCSOYKEAQCAICFMRUXI33SI5KUSTDBPFXXK5BOINXWY33SIZUWK3DEFAREG33MN5ZCELBAINXWY33SFZTXEZLZFE5QU7I=".FromBase32()),
         }
     };
 
@@ -93,7 +93,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb"),
+                }, "OVZWS3THEAUG4ZLXEBJG65LOMRSWIQTPPAUCSKIKPMFCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXFIZLYORDGSZLMMQUCEVDFPB2CELBAEIRCSOYKEAQCAICFMRUXI33SI5KUSTDBPFXXK5BOINXWY33SIZUWK3DEFAREG33MN5ZCELBAINXWY33SFZTXEZLZFE5QU7I=".FromBase32()),
         }
     };
 
@@ -110,7 +110,7 @@ public static class DemoScenarios
                         EditorGUILayout.TextField("Text", "");
                         EditorGUILayout.ColorField("Color", Color.grey);
                     }
-                }, "Blubb"),
+                }, "OVZWS3THEAUG4ZLXEBCWI2LUN5ZEM4TBNVSSQISDMFYHI2LPNYRCYICDN5WG64ROO5UGS5DFFEUQU6YKEAQCAICFMRUXI33SI5KUSTDBPFXXK5BOKRSXQ5CGNFSWYZBIEJKGK6DUEIWCAIRCFE5QUIBAEAQEKZDJORXXER2VJFGGC6LPOV2C4Q3PNRXXERTJMVWGIKBCINXWY33SEIWCAQ3PNRXXELTHOJSXSKJ3BJ6Q====".FromBase32()),
         }
     };
 
@@ -132,7 +132,7 @@ public static class DemoScenarios
                         else
                             GUILayout.Space(10);
                     }
-                }, "Blubb"),
+                }, "OVZWS3THEAUEM33MMRQWE3DFIVSGS5DPOJDHEYLNMUQGM33MMRQWE3DFEA6SA3TFO4QEM33MMRQWE3DFIVSGS5DPOJDHEYLNMUUCEW2GN5WGIYLCNRSUKZDJORXXERTSMFWWKRLYMFWXA3DFLURCYIBCINWGSY3LEBWWKIJCFQQEG33MN5ZC453INF2GKLBAINXWY33SFZ3WQ2LUMUUSSCT3BIQCAIBANFTCQZTPNRSGCYTMMUXEK6DQMFXGIZLEFEFCAIBAEB5QUIBAEAQCAIBAEBCWI2LUN5ZEOVKJJRQXS33VOQXFIZLYORDGSZLMMQUCEVDFPB2CELBAEIRCSOYKEAQCAIBAEAQCARLENF2G64SHKVEUYYLZN52XILSDN5WG64SGNFSWYZBIEJBW63DPOIRCYICDN5WG64ROM5ZGK6JJHMFCAIBAEB6QUIBAEAQGK3DTMUFCAIBAEAQCAIBAI5KUSTDBPFXXK5BOKNYGCY3FFAYTAKJ3BJ6Q====".FromBase32()),
         }
     };
 

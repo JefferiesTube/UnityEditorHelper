@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -243,7 +242,8 @@ public class DemoScriptEditor : EditorWindow
                                         {
                                             if (scenario.ShowCode)
                                             {
-                                                EditorGUILayout.TextArea(scenario.SampleCode, GUILayout.MinHeight(120));
+                                                //EditorGUILayout.TextArea(scenario.SampleCode, GUILayout.MinHeight(120));
+                                                EditorGUILayout.SelectableLabel(scenario.SampleCode, GUILayout.MinHeight(120));
                                             }
                                             else
                                             {
