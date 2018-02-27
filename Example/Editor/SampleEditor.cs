@@ -31,6 +31,7 @@ public class DemoScriptEditor : EditorWindow
             DemoScenarios.RoundedBox,
             DemoScenarios.EditorFrame,
             DemoScenarios.FoldableEditorFrame,
+            DemoScenarios.SwitchGUIDepth,
         };
 
         _demoObject = CreateInstance<DemoObject>();
@@ -206,7 +207,14 @@ public class DemoScriptEditor : EditorWindow
         {
             using (new EditorBlock(EditorBlock.Orientation.Vertical, "Box", GUILayout.Width(200), GUILayout.ExpandHeight(true)))
             {
+                int oldSelectedBlockIndex = _selectedBlockIndex;
                 _selectedBlockIndex = GUILayout.SelectionGrid(_selectedBlockIndex, _blockDemoScenarios.Select(s => s.Name).ToArray(), 1);
+                if (oldSelectedBlockIndex != _selectedBlockIndex)
+                {
+                    GUI.SetNextControlName("Some stuff to loose focus");
+                    GUI.Label(new Rect(-float.MaxValue, -float.MaxValue, 1, 1), "");
+                    GUI.FocusControl("Some stuff to loose focus");
+                }
             }
             using (new EditorBlock(EditorBlock.Orientation.Vertical, GUILayout.ExpandHeight(true)))
             {
@@ -242,8 +250,7 @@ public class DemoScriptEditor : EditorWindow
                                         {
                                             if (scenario.ShowCode)
                                             {
-                                                //EditorGUILayout.TextArea(scenario.SampleCode, GUILayout.MinHeight(120));
-                                                EditorGUILayout.SelectableLabel(scenario.SampleCode, GUILayout.MinHeight(120));
+                                                EditorHelper.ScrollableSelectableLabel(scenario.ScrollPos, scenario.SampleCode, EditorStyles.label);
                                             }
                                             else
                                             {
