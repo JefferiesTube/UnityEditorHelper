@@ -6,36 +6,6 @@ using UnityEditor;
 using UnityEditorHelper;
 using UnityEngine;
 
-public class DemoScenarioContent
-{
-    public string Caption;
-    public string Description;
-    public Action Sample;
-    public string SampleCode;
-
-    public bool ShowCode;
-
-    public DemoScenarioContent(string caption, string description, Action sample, string sampleCode)
-    {
-        Caption = caption;
-        Description = description;
-        Sample = sample;
-        SampleCode = sampleCode;
-    }
-}
-
-public class DemoScenario
-{
-    public string Name;
-
-    public List<DemoScenarioContent> Scenarios;
-
-    public DemoScenario()
-    {
-        Scenarios = new List<DemoScenarioContent>();
-    }
-}
-
 public class DemoScriptEditor : EditorWindow
 {
     private enum EditorPage { PropertyDrawer, Blocks, Utility, About }
@@ -57,31 +27,11 @@ public class DemoScriptEditor : EditorWindow
     {
         _blockDemoScenarios = new List<DemoScenario>
         {
-            new DemoScenario
-            {
-                Name = "EditorBlock (horizontal)",
-                Scenarios = new List<DemoScenarioContent>
-                {
-                    new DemoScenarioContent("Simple horizontal block", "Same as EditorGUILayout.BeginHorizontal/EndHorizontal",
-                        delegate
-                        {
-                            using (new EditorBlock(EditorBlock.Orientation.Horizontal))
-                            {
-                                EditorGUILayout.TextField("Text", "");
-                                EditorGUILayout.ColorField("Color", Color.grey);
-                            }
-                        }, "Blubb"),
-                    new DemoScenarioContent("Horizontal block with named style", "Same as above but uses a style of a given name",
-                        delegate
-                        {
-                            using (new EditorBlock(EditorBlock.Orientation.Horizontal, "Box"))
-                            {
-                                EditorGUILayout.TextField("Text", "");
-                                EditorGUILayout.ColorField("Color", Color.grey);
-                            }
-                        }, "Blubb2"),
-                }
-            }
+            DemoScenarios.EditorBlockHorizontal,
+            DemoScenarios.EditorBlockVertical,
+            DemoScenarios.RoundedBox,
+            DemoScenarios.EditorFrame,
+            DemoScenarios.FoldableEditorFrame,
         };
 
         _demoObject = CreateInstance<DemoObject>();
