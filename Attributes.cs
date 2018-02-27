@@ -3,9 +3,11 @@ using UnityEngine;
 
 namespace UnityEditorHelper
 {
+    public class LayerAttribute : PropertyAttribute { }
+
     public class LimitAttribute : PropertyAttribute
     {
-        public enum Mode { LimitLower, LimitUpper, LimitBoth }
+        private enum Mode { LimitLower, LimitUpper, LimitBoth }
 
         private readonly Mode _limitMode;
 
@@ -14,7 +16,7 @@ namespace UnityEditorHelper
 
         public LimitAttribute(int lowerLimit) : this(Mode.LimitLower, lowerLimit, int.MaxValue) { }
 
-        public LimitAttribute(int lowerLimit, int upperLimit) : this(Mode.LimitLower, lowerLimit, upperLimit) { }
+        public LimitAttribute(int lowerLimit, int upperLimit) : this(Mode.LimitBoth, lowerLimit, upperLimit) { }
 
         private LimitAttribute(Mode mode, int lowerLimit, int upperLimit)
         {
@@ -38,4 +40,8 @@ namespace UnityEditorHelper
             }
         }
     }
+
+    public class SortingLayerAttribute : PropertyAttribute { }
+
+    public class TagAttribute : PropertyAttribute { }
 }
