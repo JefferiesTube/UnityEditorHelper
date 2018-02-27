@@ -208,7 +208,7 @@ public static class DemoScenarios
         Name = "SwitchGUIDepth",
         Scenarios = new List<DemoScenarioContent>
         {
-            new DemoScenarioContent("SwitchGUIDepth", "Similar to EditorFrame, but can be collapsed by clicking on the header",
+            new DemoScenarioContent("SwitchGUIDepth", "Draw Controls overlaying each other",
                 delegate
                 {
                     Rect rect = EditorGUILayout.GetControlRect(false, 50);
