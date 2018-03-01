@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -227,8 +228,6 @@ namespace UnityEditorHelper
 
         #endregion GUI Utilities
     }
-
-    #region Blocks
 
     public sealed class RoundedBox : IDisposable
     {
@@ -527,5 +526,38 @@ namespace UnityEditorHelper
         }
     }
 
-    #endregion Blocks
+    public static class GridBlock
+    {
+        public static void Draw<T>(ref Vector2 scrollPos, bool alwaysShowHorizontalScrollbar, bool alwaysShowVerticalScrollbar, List<T> elements, int itemCountX, float padding, Func<T, bool> drawer)
+        {
+            scrollPos = GUILayout.BeginScrollView(scrollPos, alwaysShowHorizontalScrollbar, alwaysShowVerticalScrollbar);
+            if (elements.Any())
+            {
+                EditorGUILayout.BeginHorizontal();
+                int index = 0;
+
+                using (new EditorBlock(EditorBlock.Orientation.Vertical))
+                {
+                    for (int i = 0; i < Mathf.CeilToInt((float)elements.Count / itemCountX); i++)
+                    {
+                        using (new EditorBlock(EditorBlock.Orientation.Horizontal))
+                        {
+                            for (int j = 0; j < itemCountX; j++)
+                            {
+                                if (index < elements.Count)
+                                {
+                                    drawer(elements[index]);
+                                    GUILayout.Space(padding);
+                                }
+                                index++;
+                            }
+                        }
+                        GUILayout.Space(padding);
+                    }
+                }
+                EditorGUILayout.EndHorizontal();
+            }
+            GUILayout.EndScrollView();
+        }
+    }
 }
